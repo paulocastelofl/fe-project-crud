@@ -1,0 +1,26 @@
+<div class="container mt-4">
+    <div class="row">
+        <button type="button" class="btn btn-primary" (click)="goToEditNewPerson()">Novo</button>
+    </div>
+    <div class="row">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Telefone</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let person of users">
+                    <td>{{ person.name }}</td>
+                    <td>{{ person.phone }}</td>
+                    <td>
+                        <button type="button" class="btn btn-info"
+                            (click)="goToEditNewPerson(person.id)">Editar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
